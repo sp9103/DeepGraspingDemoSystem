@@ -112,7 +112,7 @@ void SimulatorControl::rot(cv::Mat rotMat, FingerInfo *fin){
 	fin->z = resultMat.at<float>(2, 0);
 }
 
-void SimulatorControl::renderData(int *src){
+bool SimulatorControl::renderData(int *src){
 	//시뮬레이터 체크
 	RobotInfoData sendData = robotDataFormat;
 	armsdk::Pose3D xaxis, zaxis;
@@ -120,5 +120,5 @@ void SimulatorControl::renderData(int *src){
 		sendData.Angle[i] = src[i];
 	fingerTransform(&sendData, &xaxis, NULL, &zaxis);
 
-	robotvisServer.SendAndCheck(sendData);
+	return robotvisServer.SendAndCheck(sendData);
 }

@@ -17,7 +17,7 @@ public:
 
 	void Initialize();
 	void Deinitialize();
-	void renderData(int *src);
+	bool renderData(int *src);
 
 private:
 	RobotVisServer robotvisServer;
