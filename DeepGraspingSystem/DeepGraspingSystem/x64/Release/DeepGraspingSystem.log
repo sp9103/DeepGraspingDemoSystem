@@ -1,0 +1,68 @@
+﻿빌드 시작: 2016-08-01 오전 10:53:17
+     1>2 노드의 "D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\DeepGraspingSystem\DeepGraspingSystem.vcxproj" 프로젝트(Build 대상)입니다.
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\DeepGraspingSystem.exe" /INCREMENTAL:NO /NOLOGO caffelib.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib cudart.lib cublas.lib curand.lib libprotobuf.lib hdf5_tools.lib hdf5_hl_fortran.lib hdf5_fortran.lib hdf5_hl_f90cstub.lib hdf5_f90cstub.lib hdf5_cpp.lib hdf5_hl_cpp.lib hdf5_hl.lib hdf5.lib zlib.lib szip.lib opencv_world300.lib shlwapi.lib leveldb.lib cublas_device.lib cuda.lib libglog.lib lmdb.lib cudnn.lib libopenblas.dll.a libgflags.lib opencv_core2410.lib opencv_highgui2410.lib opencv_imgproc2410.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\DeepGraspingSystem.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\DeepGraspingSystem.lib" /MACHINE:X64 x64\Release\batch_norm_layer.obj
+         x64\Release\depth_concat_layer.obj
+         x64\Release\gmm_layer.obj
+         x64\Release\inner_product_layer.obj
+         x64\Release\spatial_layer.obj
+         x64\Release\split_layer.obj
+         x64\Release\layer_factory.obj
+         x64\Release\ARMSDK_Math.obj
+         x64\Release\JointData.obj
+         x64\Release\Kinematics.obj
+         x64\Release\MotionPlay.obj
+         x64\Release\RobotInfo.obj
+         x64\Release\TrajectoryGenerator.obj
+         x64\Release\MotionTimer.obj
+         x64\Release\main.obj
+         x64\Release\RobotVisServer.obj
+         x64\Release\SimulatorControl.obj
+         코드를 생성하고 있습니다.
+     1>d:\users\vision demo\documents\deepgrasping\src\caffe\layer_factory.cpp(138): warning C4715: 'caffe::GetSoftmaxLayer<double>' : 모든 제어 경로에서 값을 반환하지는 않습니다.
+     1>d:\users\vision demo\documents\deepgrasping\src\caffe\layer_factory.cpp(69): warning C4715: 'caffe::GetPoolingLayer<double>' : 모든 제어 경로에서 값을 반환하지는 않습니다.
+     1>d:\users\vision demo\documents\deepgrasping\src\caffe\layer_factory.cpp(69): warning C4715: 'caffe::GetPoolingLayer<float>' : 모든 제어 경로에서 값을 반환하지는 않습니다.
+     1>d:\users\vision demo\documents\deepgrasping\src\caffe\layer_factory.cpp(138): warning C4715: 'caffe::GetSoftmaxLayer<float>' : 모든 제어 경로에서 값을 반환하지는 않습니다.
+     1>d:\users\vision demo\documents\deepgrasping\src\caffe\layer_factory.cpp(161): warning C4715: 'caffe::GetTanHLayer<double>' : 모든 제어 경로에서 값을 반환하지는 않습니다.
+     1>d:\users\vision demo\documents\deepgrasping\src\caffe\layer_factory.cpp(92): warning C4715: 'caffe::GetReLULayer<double>' : 모든 제어 경로에서 값을 반환하지는 않습니다.
+     1>d:\users\vision demo\documents\deepgrasping\src\caffe\layer_factory.cpp(115): warning C4715: 'caffe::GetSigmoidLayer<double>' : 모든 제어 경로에서 값을 반환하지는 않습니다.
+     1>d:\users\vision demo\documents\deepgrasping\src\caffe\layer_factory.cpp(39): warning C4715: 'caffe::GetConvolutionLayer<double>' : 모든 제어 경로에서 값을 반환하지는 않습니다.
+     1>d:\users\vision demo\documents\deepgrasping\src\caffe\layer_factory.cpp(115): warning C4715: 'caffe::GetSigmoidLayer<float>' : 모든 제어 경로에서 값을 반환하지는 않습니다.
+     1>d:\users\vision demo\documents\deepgrasping\src\caffe\layer_factory.cpp(161): warning C4715: 'caffe::GetTanHLayer<float>' : 모든 제어 경로에서 값을 반환하지는 않습니다.
+     1>d:\users\vision demo\documents\deepgrasping\src\caffe\layer_factory.cpp(39): warning C4715: 'caffe::GetConvolutionLayer<float>' : 모든 제어 경로에서 값을 반환하지는 않습니다.
+     1>d:\users\vision demo\documents\deepgrasping\src\caffe\layer_factory.cpp(92): warning C4715: 'caffe::GetReLULayer<float>' : 모든 제어 경로에서 값을 반환하지는 않습니다.
+         코드를 생성했습니다.
+     1>libprotobuf.lib(coded_stream.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(coded_stream.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(common.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(common.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(descriptor.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(descriptor.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(descriptor.pb.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(descriptor.pb.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(descriptor_database.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(descriptor_database.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(dynamic_message.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(dynamic_message.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(extension_set.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(extension_set.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(extension_set_heavy.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(extension_set_heavy.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(generated_message_reflection.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(generated_message_reflection.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(generated_message_util.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(generated_message_util.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(message.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(message.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(message_lite.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(message_lite.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(once.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(once.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(atomicops_internals_x86_msvc.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(atomicops_internals_x86_msvc.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(reflection_ops.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(reflection_ops.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(repeated_field.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(repeated_field.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(structurally_valid.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(structurally_valid.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(strutil.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(strutil.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(substitute.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(substitute.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(text_format.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(text_format.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(tokenizer.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(tokenizer.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(unknown_field_set.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(unknown_field_set.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(wire_format.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(wire_format.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(wire_format_lite.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(wire_format_lite.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(zero_copy_stream.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(zero_copy_stream.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(zero_copy_stream_impl.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(zero_copy_stream_impl.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(zero_copy_stream_impl_lite.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(zero_copy_stream_impl_lite.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+     1>libprotobuf.lib(stringprintf.obj) : warning LNK4099: 'vc120.pdb' PDB를 'libprotobuf.lib(stringprintf.obj)' 또는 'D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\vc120.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+         DeepGraspingSystem.vcxproj -> D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\DeepGraspingSystem.exe
+     1>"D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\DeepGraspingSystem\DeepGraspingSystem.vcxproj" 프로젝트를 빌드했습니다(Build 대상).
+
+빌드했습니다.
+
+경과 시간: 00:00:12.66
