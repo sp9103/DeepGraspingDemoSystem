@@ -6,3 +6,5 @@
 *.bin
 *.bmp
 *.lastbuildstate
+*.exe
+*.pdb

@@ -13,10 +13,72 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Caffe_lib">
+      <UniqueIdentifier>{86b69826-077e-4c64-9ba0-3d615b0feedb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ARMSDKsrc">
+      <UniqueIdentifier>{784bef36-daf4-4481-9c85-c1b7b7692c22}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\DeepGrasping\src\caffe\layers\batch_norm_layer.cpp">
+      <Filter>Caffe_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DeepGrasping\src\caffe\layers\depth_concat_layer.cpp">
+      <Filter>Caffe_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DeepGrasping\src\caffe\layers\gmm_layer.cpp">
+      <Filter>Caffe_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DeepGrasping\src\caffe\layers\inner_product_layer.cpp">
+      <Filter>Caffe_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DeepGrasping\src\caffe\layers\spatial_layer.cpp">
+      <Filter>Caffe_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DeepGrasping\src\caffe\layers\split_layer.cpp">
+      <Filter>Caffe_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DeepGrasping\src\caffe\layer_factory.cpp">
+      <Filter>Caffe_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotVisServer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SimulatorControl.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ARMSDKsrc\ARMSDK_Math.cpp">
+      <Filter>ARMSDKsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="ARMSDKsrc\Timer\MotionTimer.cpp">
+      <Filter>ARMSDKsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="ARMSDKsrc\MotionEngine\JointData.cpp">
+      <Filter>ARMSDKsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="ARMSDKsrc\MotionEngine\Kinematics.cpp">
+      <Filter>ARMSDKsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="ARMSDKsrc\MotionEngine\MotionPlay.cpp">
+      <Filter>ARMSDKsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="ARMSDKsrc\MotionEngine\RobotInfo.cpp">
+      <Filter>ARMSDKsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="ARMSDKsrc\MotionEngine\TrajectoryGenerator.cpp">
+      <Filter>ARMSDKsrc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SimulatorControl.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="RobotVisServer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
