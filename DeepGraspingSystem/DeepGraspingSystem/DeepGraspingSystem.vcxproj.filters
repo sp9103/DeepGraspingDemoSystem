@@ -19,6 +19,18 @@
     <Filter Include="ARMSDKsrc">
       <UniqueIdentifier>{784bef36-daf4-4481-9c85-c1b7b7692c22}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Robot">
+      <UniqueIdentifier>{c6c95901-710e-4f0b-9bb7-5e8b0cddd4d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Simulator">
+      <UniqueIdentifier>{2da1bc1c-c73e-431f-b554-295f9bc39f59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HandTracker">
+      <UniqueIdentifier>{92e9ab3d-c5e0-413c-8c34-be09e1053ff7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kinect">
+      <UniqueIdentifier>{596bd6d1-db1e-482b-a254-7298b9ed25d5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -45,12 +57,6 @@
     <ClCompile Include="..\..\..\DeepGrasping\src\caffe\layer_factory.cpp">
       <Filter>Caffe_lib</Filter>
     </ClCompile>
-    <ClCompile Include="RobotVisServer.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SimulatorControl.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="ARMSDKsrc\ARMSDK_Math.cpp">
       <Filter>ARMSDKsrc</Filter>
     </ClCompile>
@@ -72,12 +78,54 @@
     <ClCompile Include="ARMSDKsrc\MotionEngine\TrajectoryGenerator.cpp">
       <Filter>ARMSDKsrc</Filter>
     </ClCompile>
+    <ClCompile Include="SimulatorControl.cpp">
+      <Filter>Simulator</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotVisServer.cpp">
+      <Filter>Simulator</Filter>
+    </ClCompile>
+    <ClCompile Include="Robot\RobotArm.cpp">
+      <Filter>Robot</Filter>
+    </ClCompile>
+    <ClCompile Include="Robot\DynamixelPro.cpp">
+      <Filter>Robot</Filter>
+    </ClCompile>
+    <ClCompile Include="Robot\MX_controller.cpp">
+      <Filter>Robot</Filter>
+    </ClCompile>
+    <ClCompile Include="Kinect\KinectMangerThread.cpp">
+      <Filter>Kinect</Filter>
+    </ClCompile>
+    <ClCompile Include="Kinect\KinectConnecter.cpp">
+      <Filter>Kinect</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SimulatorControl.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>Simulator</Filter>
     </ClInclude>
     <ClInclude Include="RobotVisServer.h">
+      <Filter>Simulator</Filter>
+    </ClInclude>
+    <ClInclude Include="Robot\MX_controller.h">
+      <Filter>Robot</Filter>
+    </ClInclude>
+    <ClInclude Include="Robot\RobotArm.h">
+      <Filter>Robot</Filter>
+    </ClInclude>
+    <ClInclude Include="Robot\dynamixel.h">
+      <Filter>Robot</Filter>
+    </ClInclude>
+    <ClInclude Include="Robot\DynamixelPro.h">
+      <Filter>Robot</Filter>
+    </ClInclude>
+    <ClInclude Include="Kinect\KinectMangerThread.h">
+      <Filter>Kinect</Filter>
+    </ClInclude>
+    <ClInclude Include="Kinect\KinectConnecter.h">
+      <Filter>Kinect</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

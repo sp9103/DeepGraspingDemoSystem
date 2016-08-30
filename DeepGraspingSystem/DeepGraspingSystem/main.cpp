@@ -2,6 +2,15 @@
 #include <caffe\caffe.hpp>
 
 #include "SimulatorControl.h"
+#include "Kinect\KinectMangerThread.h"
+
+
+#ifdef _DEBUG
+#pragma comment(lib, "ARMSDKd.lib")
+#endif
+#ifdef NDEBUG
+#pragma comment(lib, "ARMSDK.lib") 
+#endif
 
 using namespace caffe;
 

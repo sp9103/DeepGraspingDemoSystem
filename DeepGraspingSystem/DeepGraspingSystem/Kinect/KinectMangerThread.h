@@ -2,7 +2,7 @@
 #include <process.h>
 
 #include "KinectConnecter.h"
-#include "stdafx.h"
+#include "..\stdafx.h"
 
 class KinectMangerThread
 {
