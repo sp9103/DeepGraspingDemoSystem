@@ -170,6 +170,7 @@
     <ClCompile Include="Robot\DynamixelPro.cpp" />
     <ClCompile Include="Robot\MX_controller.cpp" />
     <ClCompile Include="Robot\RobotArm.cpp" />
+    <ClCompile Include="Robot\RobotManager.cpp" />
     <ClCompile Include="SimulatorControl.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -182,6 +183,7 @@
     <ClInclude Include="Robot\DynamixelPro.h" />
     <ClInclude Include="Robot\MX_controller.h" />
     <ClInclude Include="Robot\RobotArm.h" />
+    <ClInclude Include="Robot\RobotManager.h" />
     <ClInclude Include="SimulatorControl.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
