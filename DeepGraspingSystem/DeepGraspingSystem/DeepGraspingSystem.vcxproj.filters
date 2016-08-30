@@ -99,6 +99,12 @@
     <ClCompile Include="Kinect\KinectConnecter.cpp">
       <Filter>Kinect</Filter>
     </ClCompile>
+    <ClCompile Include="HandTracker\ColorBasedTracker.cpp">
+      <Filter>HandTracker</Filter>
+    </ClCompile>
+    <ClCompile Include="HandTracker\BlobLabeling.cpp">
+      <Filter>HandTracker</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SimulatorControl.h">
@@ -127,6 +133,12 @@
     </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="HandTracker\ColorBasedTracker.h">
+      <Filter>HandTracker</Filter>
+    </ClInclude>
+    <ClInclude Include="HandTracker\BlobLabeling.h">
+      <Filter>HandTracker</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

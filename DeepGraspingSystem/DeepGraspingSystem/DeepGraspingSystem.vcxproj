@@ -161,6 +161,8 @@
     <ClCompile Include="ARMSDKsrc\MotionEngine\RobotInfo.cpp" />
     <ClCompile Include="ARMSDKsrc\MotionEngine\TrajectoryGenerator.cpp" />
     <ClCompile Include="ARMSDKsrc\Timer\MotionTimer.cpp" />
+    <ClCompile Include="HandTracker\BlobLabeling.cpp" />
+    <ClCompile Include="HandTracker\ColorBasedTracker.cpp" />
     <ClCompile Include="Kinect\KinectConnecter.cpp" />
     <ClCompile Include="Kinect\KinectMangerThread.cpp" />
     <ClCompile Include="main.cpp" />
@@ -171,6 +173,8 @@
     <ClCompile Include="SimulatorControl.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="HandTracker\BlobLabeling.h" />
+    <ClInclude Include="HandTracker\ColorBasedTracker.h" />
     <ClInclude Include="Kinect\KinectConnecter.h" />
     <ClInclude Include="Kinect\KinectMangerThread.h" />
     <ClInclude Include="RobotVisServer.h" />

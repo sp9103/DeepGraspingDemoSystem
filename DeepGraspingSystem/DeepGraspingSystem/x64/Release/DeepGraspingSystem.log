@@ -1,6 +1,23 @@
-﻿빌드 시작: 2016-08-30 오후 5:21:50
+﻿빌드 시작: 2016-08-30 오후 6:17:25
      1>2 노드의 "D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\DeepGraspingSystem\DeepGraspingSystem.vcxproj" 프로젝트(Build 대상)입니다.
-     1>Link:
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl- /O2 /Oi /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /D _AFXDLL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /Gd /TP /errorReport:prompt HandTracker\BlobLabeling.cpp HandTracker\ColorBasedTracker.cpp
+         BlobLabeling.cpp
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/mat.hpp(1965): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/persistence.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/utility.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>HandTracker\BlobLabeling.cpp(41): warning C4267: '초기화 중' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>HandTracker\BlobLabeling.cpp(58): warning C4244: '초기화 중' : 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>HandTracker\BlobLabeling.cpp(61): warning C4244: '=' : 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>HandTracker\BlobLabeling.cpp(111): warning C4244: '=' : 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>HandTracker\BlobLabeling.cpp(134): warning C4244: 'return' : 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>HandTracker\BlobLabeling.cpp(138): warning C4267: 'return' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+         ColorBasedTracker.cpp
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/mat.hpp(1965): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/persistence.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/utility.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>HandTracker\ColorBasedTracker.cpp(196): warning C4267: '초기화 중' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+       Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\DeepGraspingSystem.exe" /INCREMENTAL:NO /NOLOGO caffelib.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib cudart.lib cublas.lib curand.lib libprotobuf.lib hdf5_tools.lib hdf5_hl_fortran.lib hdf5_fortran.lib hdf5_hl_f90cstub.lib hdf5_f90cstub.lib hdf5_cpp.lib hdf5_hl_cpp.lib hdf5_hl.lib hdf5.lib zlib.lib szip.lib opencv_world300.lib shlwapi.lib leveldb.lib cublas_device.lib cuda.lib libglog.lib lmdb.lib cudnn.lib libopenblas.dll.a libgflags.lib opencv_core2410.lib opencv_highgui2410.lib opencv_imgproc2410.lib kinect20.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\DeepGraspingSystem.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\DeepGraspingSystem.lib" /MACHINE:X64 x64\Release\batch_norm_layer.obj
          x64\Release\depth_concat_layer.obj
          x64\Release\gmm_layer.obj
@@ -15,6 +32,8 @@
          x64\Release\RobotInfo.obj
          x64\Release\TrajectoryGenerator.obj
          x64\Release\MotionTimer.obj
+         x64\Release\BlobLabeling.obj
+         x64\Release\ColorBasedTracker.obj
          x64\Release\KinectConnecter.obj
          x64\Release\KinectMangerThread.obj
          x64\Release\main.obj
@@ -70,4 +89,4 @@
 
 빌드했습니다.
 
-경과 시간: 00:00:12.97
+경과 시간: 00:00:15.25
