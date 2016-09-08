@@ -19,6 +19,9 @@ public:
 	int Initialize(int PortNum, int BaudRateNum);
 	int DeInitialize();
 
+	void safeRelease();
+	void safeMove(int *pos);
+
 private:
 	armsdk::RobotInfo robot;
 	armsdk::Kinematics kin;

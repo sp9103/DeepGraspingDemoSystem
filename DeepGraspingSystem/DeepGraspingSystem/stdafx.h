@@ -12,6 +12,10 @@
 #define KINECT_DEPTH_WIDTH		512
 #define KINECT_DEPTH_HEIGHT		424
 
+#define HEIGHT			160
+#define WIDTH			160
+#define CHANNEL			3
+
 #define OPENCV_WAIT_DELAY		1
 
 #define PI						3.141592653589

@@ -51,11 +51,13 @@ bool RobotManager::robotConnectCheck(){
 			return false;
 		}
 	}
+
+	return true;
 }
 
 int RobotManager::Initialize(int PortNum, int BaudRateNum){
 	ControllerInit(PortNum, BaudRateNum);
-	if (robotConnectCheck()){
+	if (!robotConnectCheck()){
 		printf("Robot Init fail\n");
 		return -1;
 	}
@@ -65,4 +67,14 @@ int RobotManager::DeInitialize(){
 	arm.DeInit();
 
 	return 0;
+}
+
+void RobotManager::safeRelease(){
+	arm.TorqueOn();
+	arm.safeReleasePose();
+	arm.TorqueOff();
+}
+
+void RobotManager::safeMove(int *pos){
+	arm.safeMovePose(pos);
 }
