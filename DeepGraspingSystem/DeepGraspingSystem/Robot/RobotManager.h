@@ -19,6 +19,8 @@ public:
 	int Initialize(int PortNum, int BaudRateNum);
 	int DeInitialize();
 
+	void Approaching(int *pos);
+
 	void safeRelease();
 	void safeMove(int *pos);
 

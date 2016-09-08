@@ -80,7 +80,6 @@ void RobotManager::safeRelease(){
 }
 
 void RobotManager::safeMove(int *pos){
-	FingerLimit(&pos[NUM_JOINT]);
 	arm.safeMovePose(pos);
 }
 
@@ -105,4 +104,15 @@ void RobotManager::FingerLimit(int *src){
 		if (src[i] < min)
 			src[i] = min;
 	}
+}
+
+void RobotManager::Approaching(int *pos){
+	FingerLimit(&pos[NUM_JOINT]);
+
+	int presPose[6];
+	if (pos[1] > 151471)	pos[1] = 151471;
+	if (pos[1] < -152820)	pos[1] = -152820;
+
+	arm.safeMovePose(pos);
+	arm.SetFingerPosition(&pos[NUM_JOINT]);
 }
