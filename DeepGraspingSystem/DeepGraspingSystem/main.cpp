@@ -12,6 +12,9 @@
 
 using namespace caffe;
 
+void resultToRobotMotion(const std::vector<caffe::Blob<float>*>& src, int *dst);
+void rgbConvertCaffeType(cv::Mat src, cv::Mat *dst);
+
 int main(){
 	//0-1. Kinect Initialize
 	cv::Rect				RobotROI((KINECT_DEPTH_WIDTH - 160) / 2 + 40, (KINECT_DEPTH_HEIGHT - 160) / 2, 160, 160);
@@ -23,11 +26,13 @@ int main(){
 	robot.Initialize(3, 3);
 
 	//robot Initial move
+	robot.TorqueOn();
 	robot.safeRelease();
 	printf("if system ready, press any key to console\n");
 	getch();
 	cv::Mat RgbBack = kinect.getImg();
 	cv::Mat DepthBack = kinect.getDepth();
+	cv::cvtColor(RgbBack, RgbBack, CV_BGRA2BGR);
 
 	//0-3. Deepnet initialize
 	// mode setting - CPU/GPU
@@ -37,8 +42,8 @@ int main(){
 	Caffe::SetDevice(device_id);
 
 	//1.Approaching network load 
-	Net<float> caffe_test_net(APPROACH_NET_PATH, caffe::TEST);
-	caffe_test_net.CopyTrainedLayersFrom(APPROACH_NET_TRAINRESULT);
+	Net<float> approach_net(APPROACH_NET_PATH, caffe::TEST);
+	approach_net.CopyTrainedLayersFrom(APPROACH_NET_TRAINRESULT);
 
 	//2.Pregrasping network load
 
@@ -49,7 +54,8 @@ int main(){
 	//RUN
 	Blob<float> rgbBlob(1, 3, HEIGHT, WIDTH);
 	Blob<float> depthBlob(1, 1, HEIGHT, WIDTH);
-
+	int robotMotion[9];
+	float loss;
 	printf("Start calculate network output, press 's' key to opencv window\n");
 	while (1){
 		cv::Mat kinectRGB	= kinect.getImg();
@@ -59,19 +65,52 @@ int main(){
 		char key = cv::waitKey(10);
 
 		if (key == 's'){
+			//Approaching network
 			//Mat -> Blob
-			memcpy(rgbBlob.mutable_cpu_data(), kinectRGB.ptr<float>(0), sizeof(float) * HEIGHT * WIDTH * CHANNEL);
+			cv::cvtColor(kinectRGB, kinectRGB, CV_BGRA2BGR);
+			cv::Mat caffeRgb;
+			rgbConvertCaffeType(kinectRGB, &caffeRgb);
+			memcpy(rgbBlob.mutable_cpu_data(), caffeRgb.ptr<float>(0), sizeof(float) * HEIGHT * WIDTH * CHANNEL);
 			memcpy(depthBlob.mutable_cpu_data(), kinectDEPTH.ptr<float>(0), sizeof(float) * HEIGHT * WIDTH);
 			//입력 형식 맞춰주기
 			vector<Blob<float>*> input_vec;				//입력 RGB, DEPTH
 			input_vec.push_back(&rgbBlob);
 			input_vec.push_back(&depthBlob);
+			const vector<Blob<float>*>& result_approach = approach_net.Forward(input_vec, &loss);
+			resultToRobotMotion(result_approach, robotMotion);
+			simul.renderData(robotMotion);
+			printf("if u want move, press any key to console\n");
+			getch();
+			robot.safeMove(robotMotion);
+
+			robot.safeRelease();
 		}
 	}
+	robot.TorqueOff();
 
 	robot.DeInitialize();
 	kinect.Deinitialize();
 	simul.Deinitialize();
 
 	return 0;
+}
+
+void resultToRobotMotion(const std::vector<caffe::Blob<float>*>& src, int *dst){
+	int angle_max[9] = { 251000, 251000, 251000, 251000, 151875, 151875, 4095, 4095, 4095 };
+	float outputData[9];
+	memcpy(outputData, src.at(0)->cpu_data(), sizeof(float) * 9);
+	for (int j = 0; j < DATADIM; j++){
+		dst[j] = (int)(outputData[j] / 180.f * angle_max[j]);
+	}
+}
+
+void rgbConvertCaffeType(cv::Mat src, cv::Mat *dst){
+	dst->create(src.rows, src.cols, CV_32FC3);
+	for (int h = 0; h < src.rows; h++){
+		for (int w = 0; w < src.cols; w++){
+			for (int c = 0; c < src.channels(); c++){
+				dst->at<float>(c*src.rows*src.cols + src.cols*h + w) = (float)src.at<cv::Vec3b>(h, w)[c] / 255.0f;
+			}
+		}
+	}
 }

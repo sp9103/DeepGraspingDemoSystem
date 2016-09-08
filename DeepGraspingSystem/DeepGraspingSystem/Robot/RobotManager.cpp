@@ -3,6 +3,12 @@
 
 RobotManager::RobotManager()
 {
+	FinLimitMotion[0][0] = 2973;
+	FinLimitMotion[1][0] = 2533;
+	FinLimitMotion[0][1] = 1527;
+	FinLimitMotion[1][1] = 1097;
+	FinLimitMotion[0][2] = 2052;
+	FinLimitMotion[1][2] = 1774;
 }
 
 
@@ -70,11 +76,33 @@ int RobotManager::DeInitialize(){
 }
 
 void RobotManager::safeRelease(){
-	arm.TorqueOn();
 	arm.safeReleasePose();
-	arm.TorqueOff();
 }
 
 void RobotManager::safeMove(int *pos){
+	FingerLimit(&pos[NUM_JOINT]);
 	arm.safeMovePose(pos);
+}
+
+void RobotManager::TorqueOn(){
+	arm.TorqueOn();
+}
+
+void RobotManager::TorqueOff(){
+	arm.TorqueOff();
+}
+
+void RobotManager::Move(int *pos){
+
+}
+
+void RobotManager::FingerLimit(int *src){
+	for (int i = 0; i < 3; i++){
+		int min = FinLimitMotion[1][i];
+		int max = FinLimitMotion[0][i];
+		if (src[i] > max)
+			src[i] = max;
+		if (src[i] < min)
+			src[i] = min;
+	}
 }
