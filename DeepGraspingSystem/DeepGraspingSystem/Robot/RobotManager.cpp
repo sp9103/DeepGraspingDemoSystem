@@ -112,7 +112,7 @@ void RobotManager::Approaching(int *pos){
 	int presPose[6];
 	if (pos[1] > 151471)	pos[1] = 151471;
 	if (pos[1] < -152820)	pos[1] = -152820;
-
-	arm.safeMovePose(pos);
+	
 	arm.SetFingerPosition(&pos[NUM_JOINT]);
+	arm.safeMovePose(pos);
 }

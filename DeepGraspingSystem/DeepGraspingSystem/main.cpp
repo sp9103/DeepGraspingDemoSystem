@@ -4,11 +4,12 @@
 #include "SimulatorControl.h"
 #include "Kinect\KinectMangerThread.h"
 #include "Robot\RobotManager.h"
+#include "HandTracker\ColorBasedTracker_pregrasp.h"
 
 #define APPROACH_NET_PATH "APPROACH_NET\\deploy_val_app_Net_fc.prototxt"
 #define APPROACH_NET_TRAINRESULT "APPROACH_NET\\app_Net_iter_50000.caffemodel"
-#define PREGRASP_NET_PATH ""
-#define PREGRASP_NET_TRAINRESULT
+#define PREGRASP_NET_PATH "PREGRASP_NET\\deploy_val_pregrasp_Net_fc.prototxt"
+#define PREGRASP_NET_TRAINRESULT ""
 
 using namespace caffe;
 
@@ -33,6 +34,8 @@ int main(){
 	cv::Mat RgbBack = kinect.getImg();
 	cv::Mat DepthBack = kinect.getDepth();
 	cv::cvtColor(RgbBack, RgbBack, CV_BGRA2BGR);
+	ColorBasedTracker_pregrasp tracker;
+	tracker.InsertBackGround(RgbBack, RgbBack);
 
 	//0-3. Deepnet initialize
 	// mode setting - CPU/GPU
@@ -46,6 +49,8 @@ int main(){
 	approach_net.CopyTrainedLayersFrom(APPROACH_NET_TRAINRESULT);
 
 	//2.Pregrasping network load
+	Net<float> pregrasp_net(PREGRASP_NET_PATH, caffe::TEST);
+	pregrasp_net.CopyTrainedLayersFrom(PREGRASP_NET_TRAINRESULT);
 
 	//simulator init
 	SimulatorControl simul;
@@ -72,19 +77,40 @@ int main(){
 			rgbConvertCaffeType(kinectRGB, &caffeRgb);
 			memcpy(rgbBlob.mutable_cpu_data(), caffeRgb.ptr<float>(0), sizeof(float) * HEIGHT * WIDTH * CHANNEL);
 			memcpy(depthBlob.mutable_cpu_data(), kinectDEPTH.ptr<float>(0), sizeof(float) * HEIGHT * WIDTH);
-			//입력 형식 맞춰주기
 			vector<Blob<float>*> input_vec;				//입력 RGB, DEPTH
 			input_vec.push_back(&rgbBlob);
 			input_vec.push_back(&depthBlob);
+
+			//Approaching
 			const vector<Blob<float>*>& result_approach = approach_net.Forward(input_vec, &loss);
 			resultToRobotMotion(result_approach, robotMotion);
 			simul.renderData(robotMotion);
 			printf("if u want move, press any key to console\n");
 			getch();
-			robot.safeMove(robotMotion);
+			robot.Approaching(robotMotion);
+
+			//Pregrasp
+			while (1){
+				input_vec.clear();
+				cv::Mat kinectRGBPregrasp = kinect.getImg();
+				cv::Mat kinectDEPTHPregrasp = kinect.getDepth();
+				cv::Mat procImg, procDepth;
+				tracker.calcImage(kinectRGBPregrasp, kinectDEPTHPregrasp, &procImg, &procDepth);
+
+				cv::imshow("ROI", procImg);
+				cv::waitKey(10);
+				rgbConvertCaffeType(procImg, &caffeRgb);
+				memcpy(rgbBlob.mutable_cpu_data(), caffeRgb.ptr<float>(0), sizeof(float) * HEIGHT * WIDTH * CHANNEL);
+				memcpy(depthBlob.mutable_cpu_data(), kinectDEPTH.ptr<float>(0), sizeof(float) * HEIGHT * WIDTH);
+				input_vec.push_back(&rgbBlob);
+				input_vec.push_back(&depthBlob);
+				const vector<Blob<float>*>& result_pregrasp = pregrasp_net.Forward(input_vec, &loss);
+			}
 
 			robot.safeRelease();
 		}
+		else if (key == 'q')
+			break;
 	}
 	robot.TorqueOff();
 
