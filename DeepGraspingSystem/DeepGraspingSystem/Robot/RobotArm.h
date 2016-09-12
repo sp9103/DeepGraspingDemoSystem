@@ -43,6 +43,8 @@ public:
 	int Arm_Get_JointValue(Eigen::VectorXi *value);
 	SerialPort* DXL_Get_Port(void);
 
+	bool waitMove();
+
 private:
 	int fingerID_[NUM_FINGER];
 	int jointID_[NUM_JOINT];
@@ -56,7 +58,5 @@ private:
 #ifdef USING_FINGER
 	MX_controller fingercontroller_;
 #endif
-
-	bool waitMove();
 };
 

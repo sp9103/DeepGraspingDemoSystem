@@ -108,6 +108,7 @@ void RobotManager::Move(int *pos){
 	}
 
 	//움직일때까지 기다리는 부분
+	arm.waitMove();
 }
 
 void RobotManager::FingerLimit(int *src){

@@ -97,16 +97,18 @@ int main(){
 				cv::Mat procImg, procDepth;
 				tracker.calcImage(kinectRGBPregrasp, kinectDEPTHPregrasp, &procImg, &procDepth);
 
-				cv::imshow("ROI", procImg);
+				cv::imshow("procImg", procImg);
 				cv::waitKey(10);
 				rgbConvertCaffeType(procImg, &caffeRgb);
 				memcpy(rgbBlob.mutable_cpu_data(), caffeRgb.ptr<float>(0), sizeof(float) * HEIGHT * WIDTH * CHANNEL);
-				memcpy(depthBlob.mutable_cpu_data(), kinectDEPTH.ptr<float>(0), sizeof(float) * HEIGHT * WIDTH);
+				memcpy(depthBlob.mutable_cpu_data(), procDepth.ptr<float>(0), sizeof(float) * HEIGHT * WIDTH);
 				input_vec.push_back(&rgbBlob);
 				input_vec.push_back(&depthBlob);
 				const vector<Blob<float>*>& result_pregrasp = pregrasp_net.Forward(input_vec, &loss);
 				resultToRobotMotion(result_approach, robotMotion);
 				simul.renderData(robotMotion);
+				printf("Move next step robot motion press any key\n");
+				getch();
 				robot.Move(robotMotion);
 			}
 
