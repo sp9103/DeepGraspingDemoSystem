@@ -1,13 +1,882 @@
-﻿빌드 시작: 2016-09-08 오후 5:23:34
+﻿빌드 시작: 2016-09-12 오전 11:22:28
      1>2 노드의 "D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\DeepGraspingSystem\DeepGraspingSystem.vcxproj" 프로젝트(Build 대상)입니다.
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl- /Od /Oi /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /D _AFXDLL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /Gd /TP /errorReport:prompt Robot\RobotManager.cpp main.cpp
-         RobotManager.cpp
-         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl- /Od /Oi /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /D _AFXDLL /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /Gd /TP /errorReport:prompt ..\..\..\DeepGrasping\src\caffe\layers\batch_norm_layer.cpp ..\..\..\DeepGrasping\src\caffe\layers\depth_concat_layer.cpp ..\..\..\DeepGrasping\src\caffe\layers\gmm_layer.cpp ..\..\..\DeepGrasping\src\caffe\layers\inner_product_layer.cpp ..\..\..\DeepGrasping\src\caffe\layers\spatial_layer.cpp ..\..\..\DeepGrasping\src\caffe\layers\split_layer.cpp ..\..\..\DeepGrasping\src\caffe\layer_factory.cpp HandTracker\BlobLabeling_pregrasp.cpp HandTracker\ColorBasedTracker_pregrasp.cpp main.cpp Robot\RobotManager.cpp
+         batch_norm_layer.cpp
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\glog/logging.h(1158): warning C4251: 'google::LogMessage::LogStream::streambuf_' : class 'google::base_logging::LogStreamBuf'에서는 class 'google::LogMessage::LogStream'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
+                 D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\glog/logging.h(1088) : 'google::base_logging::LogStreamBuf' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1445): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1447): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1449): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1455): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1457): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1463): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1465): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1470): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1474): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1478): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/unknown_field_set.h(142): warning C4267: '인수' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/unknown_field_set.h(237): warning C4267: 'return' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/unknown_field_set.h(305): warning C4267: 'return' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
      1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/mat.hpp(1965): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
      1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/persistence.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
      1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/utility.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
-     1>Robot\RobotManager.cpp(112): warning C4101: 'presPose' :참조되지 않은 지역 변수입니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/loss_layers.hpp(16): warning C4305: '초기화 중' : 'double'에서 'const float'(으)로 잘립니다.
+     1>..\..\..\DeepGrasping\src\caffe\layers\batch_norm_layer.cpp(239): warning C4661: 'void caffe::BatchNormLayer<float>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(120) : 'caffe::BatchNormLayer<float>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\batch_norm_layer.cpp(239): warning C4661: 'void caffe::BatchNormLayer<float>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(124) : 'caffe::BatchNormLayer<float>::Backward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\batch_norm_layer.cpp(239): warning C4661: 'void caffe::BatchNormLayer<double>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(120) : 'caffe::BatchNormLayer<double>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\batch_norm_layer.cpp(239): warning C4661: 'void caffe::BatchNormLayer<double>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(124) : 'caffe::BatchNormLayer<double>::Backward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\batch_norm_layer.cpp(103): warning C4244: '인수' : 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+                 ..\..\..\DeepGrasping\src\caffe\layers\batch_norm_layer.cpp(77) : 클래스 템플릿 멤버 함수 'void caffe::BatchNormLayer<float>::Forward_cpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)'을(를) 컴파일하고 있습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 ..\..\..\DeepGrasping\src\caffe\layers\batch_norm_layer.cpp(239) : 컴파일 중인 클래스 템플릿 인스턴스화 'caffe::BatchNormLayer<float>'에 대한 참조를 확인하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\batch_norm_layer.cpp(124): warning C4244: '인수' : 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/blob.hpp(75): warning C4267: 'return' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/blob.hpp(75) : 클래스 템플릿 멤버 함수 'int caffe::Blob<Dtype>::num_axes(void) const'을(를) 컴파일하고 있습니다.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 ..\..\..\DeepGrasping\src\caffe\layers\batch_norm_layer.cpp(17) : 컴파일 중인 함수 템플릿 인스턴스화 'int caffe::Blob<Dtype>::num_axes(void) const'에 대한 참조를 확인하십시오.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(127) : 컴파일 중인 클래스 템플릿 인스턴스화 'caffe::Blob<Dtype>'에 대한 참조를 확인하십시오.
+                 with
+                 [
+                     Dtype=float
+                 ]
+     1>..\..\..\DeepGrasping\src\caffe\layers\batch_norm_layer.cpp(11): warning C4661: 'void caffe::BatchNormLayer<float>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(120) : 'caffe::BatchNormLayer<float>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\batch_norm_layer.cpp(11): warning C4661: 'void caffe::BatchNormLayer<float>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(124) : 'caffe::BatchNormLayer<float>::Backward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\batch_norm_layer.cpp(11): warning C4661: 'void caffe::BatchNormLayer<double>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(120) : 'caffe::BatchNormLayer<double>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\batch_norm_layer.cpp(11): warning C4661: 'void caffe::BatchNormLayer<double>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(124) : 'caffe::BatchNormLayer<double>::Backward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::BatchNormLayer<float>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(120) : 'caffe::BatchNormLayer<float>::Forward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::BatchNormLayer<float>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(124) : 'caffe::BatchNormLayer<float>::Backward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::BatchNormLayer<double>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(120) : 'caffe::BatchNormLayer<double>::Forward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::BatchNormLayer<double>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(124) : 'caffe::BatchNormLayer<double>::Backward_gpu' 선언을 참조하십시오.
+         depth_concat_layer.cpp
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\glog/logging.h(1158): warning C4251: 'google::LogMessage::LogStream::streambuf_' : class 'google::base_logging::LogStreamBuf'에서는 class 'google::LogMessage::LogStream'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
+                 D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\glog/logging.h(1088) : 'google::base_logging::LogStreamBuf' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1445): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1447): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1449): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1455): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1457): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1463): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1465): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1470): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1474): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1478): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/unknown_field_set.h(142): warning C4267: '인수' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/unknown_field_set.h(237): warning C4267: 'return' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/unknown_field_set.h(305): warning C4267: 'return' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/mat.hpp(1965): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/persistence.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/utility.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/loss_layers.hpp(16): warning C4305: '초기화 중' : 'double'에서 'const float'(으)로 잘립니다.
+     1>..\..\..\DeepGrasping\src\caffe\layers\depth_concat_layer.cpp(60): warning C4661: 'void caffe::DepthConcatLayer<float>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(872) : 'caffe::DepthConcatLayer<float>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\depth_concat_layer.cpp(60): warning C4661: 'void caffe::DepthConcatLayer<float>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(876) : 'caffe::DepthConcatLayer<float>::Backward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\depth_concat_layer.cpp(60): warning C4661: 'void caffe::DepthConcatLayer<double>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(872) : 'caffe::DepthConcatLayer<double>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\depth_concat_layer.cpp(60): warning C4661: 'void caffe::DepthConcatLayer<double>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(876) : 'caffe::DepthConcatLayer<double>::Backward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/blob.hpp(75): warning C4267: 'return' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/blob.hpp(75) : 클래스 템플릿 멤버 함수 'int caffe::Blob<Dtype>::num_axes(void) const'을(를) 컴파일하고 있습니다.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/blob.hpp(90) : 컴파일 중인 함수 템플릿 인스턴스화 'int caffe::Blob<Dtype>::num_axes(void) const'에 대한 참조를 확인하십시오.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/layer.hpp(47) : 컴파일 중인 클래스 템플릿 인스턴스화 'caffe::Blob<Dtype>'에 대한 참조를 확인하십시오.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/layer.hpp(40) : 클래스 템플릿 멤버 함수 'caffe::Layer<Dtype>::Layer(const caffe::LayerParameter &)'을(를) 컴파일하고 있습니다.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(858) : 컴파일 중인 함수 템플릿 인스턴스화 'caffe::Layer<Dtype>::Layer(const caffe::LayerParameter &)'에 대한 참조를 확인하십시오.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(856) : 컴파일 중인 클래스 템플릿 인스턴스화 'caffe::Layer<Dtype>'에 대한 참조를 확인하십시오.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 ..\..\..\DeepGrasping\src\caffe\layers\depth_concat_layer.cpp(60) : 컴파일 중인 클래스 템플릿 인스턴스화 'caffe::DepthConcatLayer<float>'에 대한 참조를 확인하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\depth_concat_layer.cpp(14): warning C4661: 'void caffe::DepthConcatLayer<float>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(872) : 'caffe::DepthConcatLayer<float>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\depth_concat_layer.cpp(14): warning C4661: 'void caffe::DepthConcatLayer<float>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(876) : 'caffe::DepthConcatLayer<float>::Backward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\depth_concat_layer.cpp(14): warning C4661: 'void caffe::DepthConcatLayer<double>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(872) : 'caffe::DepthConcatLayer<double>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\depth_concat_layer.cpp(14): warning C4661: 'void caffe::DepthConcatLayer<double>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(876) : 'caffe::DepthConcatLayer<double>::Backward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::DepthConcatLayer<float>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(872) : 'caffe::DepthConcatLayer<float>::Forward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::DepthConcatLayer<float>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(876) : 'caffe::DepthConcatLayer<float>::Backward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::DepthConcatLayer<double>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(872) : 'caffe::DepthConcatLayer<double>::Forward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::DepthConcatLayer<double>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(876) : 'caffe::DepthConcatLayer<double>::Backward_gpu' 선언을 참조하십시오.
+         gmm_layer.cpp
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\glog/logging.h(1158): warning C4251: 'google::LogMessage::LogStream::streambuf_' : class 'google::base_logging::LogStreamBuf'에서는 class 'google::LogMessage::LogStream'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
+                 D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\glog/logging.h(1088) : 'google::base_logging::LogStreamBuf' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1445): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1447): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1449): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1455): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1457): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1463): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1465): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1470): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1474): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1478): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/unknown_field_set.h(142): warning C4267: '인수' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/unknown_field_set.h(237): warning C4267: 'return' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/unknown_field_set.h(305): warning C4267: 'return' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/mat.hpp(1965): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/persistence.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/utility.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/loss_layers.hpp(16): warning C4305: '초기화 중' : 'double'에서 'const float'(으)로 잘립니다.
+     1>..\..\..\DeepGrasping\src\caffe\layers\gmm_layer.cpp(158): warning C4661: 'void caffe::GMMLayer<float>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(1006) : 'caffe::GMMLayer<float>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\gmm_layer.cpp(158): warning C4661: 'void caffe::GMMLayer<float>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(1010) : 'caffe::GMMLayer<float>::Backward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\gmm_layer.cpp(158): warning C4661: 'void caffe::GMMLayer<double>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(1006) : 'caffe::GMMLayer<double>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\gmm_layer.cpp(158): warning C4661: 'void caffe::GMMLayer<double>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(1010) : 'caffe::GMMLayer<double>::Backward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/blob.hpp(75): warning C4267: 'return' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/blob.hpp(75) : 클래스 템플릿 멤버 함수 'int caffe::Blob<Dtype>::num_axes(void) const'을(를) 컴파일하고 있습니다.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/blob.hpp(90) : 컴파일 중인 함수 템플릿 인스턴스화 'int caffe::Blob<Dtype>::num_axes(void) const'에 대한 참조를 확인하십시오.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(1021) : 컴파일 중인 클래스 템플릿 인스턴스화 'caffe::Blob<Dtype>'에 대한 참조를 확인하십시오.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 ..\..\..\DeepGrasping\src\caffe\layers\gmm_layer.cpp(158) : 컴파일 중인 클래스 템플릿 인스턴스화 'caffe::GMMLayer<float>'에 대한 참조를 확인하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\gmm_layer.cpp(16): warning C4661: 'void caffe::GMMLayer<float>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(1006) : 'caffe::GMMLayer<float>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\gmm_layer.cpp(16): warning C4661: 'void caffe::GMMLayer<float>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(1010) : 'caffe::GMMLayer<float>::Backward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\gmm_layer.cpp(16): warning C4661: 'void caffe::GMMLayer<double>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(1006) : 'caffe::GMMLayer<double>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\gmm_layer.cpp(16): warning C4661: 'void caffe::GMMLayer<double>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(1010) : 'caffe::GMMLayer<double>::Backward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(153): warning C4244: '초기화 중' : 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(149) : 클래스 템플릿 멤버 함수 'void caffe::XavierFiller<Dtype>::Fill(caffe::Blob<Dtype> *)'을(를) 컴파일하고 있습니다.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(284) : 컴파일 중인 클래스 템플릿 인스턴스화 'caffe::XavierFiller<Dtype>'에 대한 참조를 확인하십시오.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 ..\..\..\DeepGrasping\src\caffe\layers\gmm_layer.cpp(50) : 컴파일 중인 함수 템플릿 인스턴스화 'caffe::Filler<Dtype> *caffe::GetFiller<Dtype>(const caffe::FillerParameter &)'에 대한 참조를 확인하십시오.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 ..\..\..\DeepGrasping\src\caffe\layers\gmm_layer.cpp(16) : 클래스 템플릿 멤버 함수 'void caffe::GMMLayer<float>::LayerSetUp(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)'을(를) 컴파일하고 있습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(159): warning C4244: '=' : 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(195): warning C4244: '초기화 중' : 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(191) : 클래스 템플릿 멤버 함수 'void caffe::MSRAFiller<Dtype>::Fill(caffe::Blob<Dtype> *)'을(를) 컴파일하고 있습니다.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(286) : 컴파일 중인 클래스 템플릿 인스턴스화 'caffe::MSRAFiller<Dtype>'에 대한 참조를 확인하십시오.
+                 with
+                 [
+                     Dtype=float
+                 ]
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(201): warning C4244: '=' : 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(254): warning C4244: '초기화 중' : 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(250) : 클래스 템플릿 멤버 함수 'void caffe::BilinearFiller<Dtype>::Fill(caffe::Blob<Dtype> *)'을(를) 컴파일하고 있습니다.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(288) : 컴파일 중인 클래스 템플릿 인스턴스화 'caffe::BilinearFiller<Dtype>'에 대한 참조를 확인하십시오.
+                 with
+                 [
+                     Dtype=float
+                 ]
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(255): warning C4244: '초기화 중' : 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(257): warning C4244: '초기화 중' : 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(258): warning C4244: '초기화 중' : 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::GMMLayer<float>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(1006) : 'caffe::GMMLayer<float>::Forward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::GMMLayer<float>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(1010) : 'caffe::GMMLayer<float>::Backward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::GMMLayer<double>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(1006) : 'caffe::GMMLayer<double>::Forward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::GMMLayer<double>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(1010) : 'caffe::GMMLayer<double>::Backward_gpu' 선언을 참조하십시오.
+         inner_product_layer.cpp
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\glog/logging.h(1158): warning C4251: 'google::LogMessage::LogStream::streambuf_' : class 'google::base_logging::LogStreamBuf'에서는 class 'google::LogMessage::LogStream'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
+                 D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\glog/logging.h(1088) : 'google::base_logging::LogStreamBuf' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1445): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1447): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1449): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1455): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1457): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1463): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1465): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1470): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1474): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1478): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/unknown_field_set.h(142): warning C4267: '인수' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/unknown_field_set.h(237): warning C4267: 'return' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/unknown_field_set.h(305): warning C4267: 'return' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/mat.hpp(1965): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/persistence.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/utility.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/loss_layers.hpp(16): warning C4305: '초기화 중' : 'double'에서 'const float'(으)로 잘립니다.
+     1>..\..\..\DeepGrasping\src\caffe\layers\inner_product_layer.cpp(157): warning C4661: 'void caffe::InnerProductLayer<float>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(422) : 'caffe::InnerProductLayer<float>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\inner_product_layer.cpp(157): warning C4661: 'void caffe::InnerProductLayer<float>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(426) : 'caffe::InnerProductLayer<float>::Backward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\inner_product_layer.cpp(157): warning C4661: 'void caffe::InnerProductLayer<double>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(422) : 'caffe::InnerProductLayer<double>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\inner_product_layer.cpp(157): warning C4661: 'void caffe::InnerProductLayer<double>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(426) : 'caffe::InnerProductLayer<double>::Backward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/blob.hpp(75): warning C4267: 'return' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/blob.hpp(75) : 클래스 템플릿 멤버 함수 'int caffe::Blob<Dtype>::num_axes(void) const'을(를) 컴파일하고 있습니다.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/blob.hpp(90) : 컴파일 중인 함수 템플릿 인스턴스화 'int caffe::Blob<Dtype>::num_axes(void) const'에 대한 참조를 확인하십시오.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(433) : 컴파일 중인 클래스 템플릿 인스턴스화 'caffe::Blob<Dtype>'에 대한 참조를 확인하십시오.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 ..\..\..\DeepGrasping\src\caffe\layers\inner_product_layer.cpp(157) : 컴파일 중인 클래스 템플릿 인스턴스화 'caffe::InnerProductLayer<float>'에 대한 참조를 확인하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\inner_product_layer.cpp(16): warning C4661: 'void caffe::InnerProductLayer<float>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(422) : 'caffe::InnerProductLayer<float>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\inner_product_layer.cpp(16): warning C4661: 'void caffe::InnerProductLayer<float>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(426) : 'caffe::InnerProductLayer<float>::Backward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\inner_product_layer.cpp(16): warning C4661: 'void caffe::InnerProductLayer<double>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(422) : 'caffe::InnerProductLayer<double>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\inner_product_layer.cpp(16): warning C4661: 'void caffe::InnerProductLayer<double>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(426) : 'caffe::InnerProductLayer<double>::Backward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(153): warning C4244: '초기화 중' : 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(149) : 클래스 템플릿 멤버 함수 'void caffe::XavierFiller<Dtype>::Fill(caffe::Blob<Dtype> *)'을(를) 컴파일하고 있습니다.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(284) : 컴파일 중인 클래스 템플릿 인스턴스화 'caffe::XavierFiller<Dtype>'에 대한 참조를 확인하십시오.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 ..\..\..\DeepGrasping\src\caffe\layers\inner_product_layer.cpp(42) : 컴파일 중인 함수 템플릿 인스턴스화 'caffe::Filler<Dtype> *caffe::GetFiller<Dtype>(const caffe::FillerParameter &)'에 대한 참조를 확인하십시오.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 ..\..\..\DeepGrasping\src\caffe\layers\inner_product_layer.cpp(16) : 클래스 템플릿 멤버 함수 'void caffe::InnerProductLayer<float>::LayerSetUp(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)'을(를) 컴파일하고 있습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(159): warning C4244: '=' : 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(195): warning C4244: '초기화 중' : 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(191) : 클래스 템플릿 멤버 함수 'void caffe::MSRAFiller<Dtype>::Fill(caffe::Blob<Dtype> *)'을(를) 컴파일하고 있습니다.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(286) : 컴파일 중인 클래스 템플릿 인스턴스화 'caffe::MSRAFiller<Dtype>'에 대한 참조를 확인하십시오.
+                 with
+                 [
+                     Dtype=float
+                 ]
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(201): warning C4244: '=' : 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(254): warning C4244: '초기화 중' : 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(250) : 클래스 템플릿 멤버 함수 'void caffe::BilinearFiller<Dtype>::Fill(caffe::Blob<Dtype> *)'을(를) 컴파일하고 있습니다.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(288) : 컴파일 중인 클래스 템플릿 인스턴스화 'caffe::BilinearFiller<Dtype>'에 대한 참조를 확인하십시오.
+                 with
+                 [
+                     Dtype=float
+                 ]
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(255): warning C4244: '초기화 중' : 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(257): warning C4244: '초기화 중' : 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/filler.hpp(258): warning C4244: '초기화 중' : 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::InnerProductLayer<float>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(422) : 'caffe::InnerProductLayer<float>::Forward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::InnerProductLayer<float>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(426) : 'caffe::InnerProductLayer<float>::Backward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::InnerProductLayer<double>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(422) : 'caffe::InnerProductLayer<double>::Forward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::InnerProductLayer<double>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(426) : 'caffe::InnerProductLayer<double>::Backward_gpu' 선언을 참조하십시오.
+         spatial_layer.cpp
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\glog/logging.h(1158): warning C4251: 'google::LogMessage::LogStream::streambuf_' : class 'google::base_logging::LogStreamBuf'에서는 class 'google::LogMessage::LogStream'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
+                 D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\glog/logging.h(1088) : 'google::base_logging::LogStreamBuf' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1445): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1447): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1449): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1455): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1457): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1463): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1465): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1470): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1474): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1478): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/unknown_field_set.h(142): warning C4267: '인수' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/unknown_field_set.h(237): warning C4267: 'return' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/unknown_field_set.h(305): warning C4267: 'return' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/mat.hpp(1965): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/persistence.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/utility.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/loss_layers.hpp(16): warning C4305: '초기화 중' : 'double'에서 'const float'(으)로 잘립니다.
+     1>..\..\..\DeepGrasping\src\caffe\layers\spatial_layer.cpp(203): warning C4661: 'void caffe::SpatialLayer<float>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(764) : 'caffe::SpatialLayer<float>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\spatial_layer.cpp(203): warning C4661: 'void caffe::SpatialLayer<float>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(768) : 'caffe::SpatialLayer<float>::Backward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\spatial_layer.cpp(203): warning C4661: 'void caffe::SpatialLayer<double>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(764) : 'caffe::SpatialLayer<double>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\spatial_layer.cpp(203): warning C4661: 'void caffe::SpatialLayer<double>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(768) : 'caffe::SpatialLayer<double>::Backward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\spatial_layer.cpp(120): warning C4244: '+=' : 'const double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+                 ..\..\..\DeepGrasping\src\caffe\layers\spatial_layer.cpp(59) : 클래스 템플릿 멤버 함수 'void caffe::SpatialLayer<double>::Forward_cpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)'을(를) 컴파일하고 있습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 ..\..\..\DeepGrasping\src\caffe\layers\spatial_layer.cpp(203) : 컴파일 중인 클래스 템플릿 인스턴스화 'caffe::SpatialLayer<double>'에 대한 참조를 확인하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\spatial_layer.cpp(121): warning C4244: '+=' : 'const double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>..\..\..\DeepGrasping\src\caffe\layers\spatial_layer.cpp(122): warning C4244: '+=' : 'const double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/blob.hpp(75): warning C4267: 'return' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/blob.hpp(75) : 클래스 템플릿 멤버 함수 'int caffe::Blob<Dtype>::num_axes(void) const'을(를) 컴파일하고 있습니다.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/blob.hpp(90) : 컴파일 중인 함수 템플릿 인스턴스화 'int caffe::Blob<Dtype>::num_axes(void) const'에 대한 참조를 확인하십시오.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(776) : 컴파일 중인 클래스 템플릿 인스턴스화 'caffe::Blob<Dtype>'에 대한 참조를 확인하십시오.
+                 with
+                 [
+                     Dtype=float
+                 ]
+                 ..\..\..\DeepGrasping\src\caffe\layers\spatial_layer.cpp(203) : 컴파일 중인 클래스 템플릿 인스턴스화 'caffe::SpatialLayer<float>'에 대한 참조를 확인하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\spatial_layer.cpp(14): warning C4661: 'void caffe::SpatialLayer<float>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(764) : 'caffe::SpatialLayer<float>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\spatial_layer.cpp(14): warning C4661: 'void caffe::SpatialLayer<float>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(768) : 'caffe::SpatialLayer<float>::Backward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\spatial_layer.cpp(14): warning C4661: 'void caffe::SpatialLayer<double>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(764) : 'caffe::SpatialLayer<double>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\spatial_layer.cpp(14): warning C4661: 'void caffe::SpatialLayer<double>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(768) : 'caffe::SpatialLayer<double>::Backward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::SpatialLayer<float>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(764) : 'caffe::SpatialLayer<float>::Forward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::SpatialLayer<float>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(768) : 'caffe::SpatialLayer<float>::Backward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::SpatialLayer<double>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(764) : 'caffe::SpatialLayer<double>::Forward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::SpatialLayer<double>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(768) : 'caffe::SpatialLayer<double>::Backward_gpu' 선언을 참조하십시오.
+         split_layer.cpp
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\glog/logging.h(1158): warning C4251: 'google::LogMessage::LogStream::streambuf_' : class 'google::base_logging::LogStreamBuf'에서는 class 'google::LogMessage::LogStream'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
+                 D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\glog/logging.h(1088) : 'google::base_logging::LogStreamBuf' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1445): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1447): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1449): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1455): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1457): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1463): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1465): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1470): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1474): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1478): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/unknown_field_set.h(142): warning C4267: '인수' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/unknown_field_set.h(237): warning C4267: 'return' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/unknown_field_set.h(305): warning C4267: 'return' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/mat.hpp(1965): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/persistence.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/utility.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/loss_layers.hpp(16): warning C4305: '초기화 중' : 'double'에서 'const float'(으)로 잘립니다.
+     1>..\..\..\DeepGrasping\src\caffe\layers\split_layer.cpp(57): warning C4661: 'void caffe::SplitLayer<float>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(668) : 'caffe::SplitLayer<float>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\split_layer.cpp(57): warning C4661: 'void caffe::SplitLayer<float>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(672) : 'caffe::SplitLayer<float>::Backward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\split_layer.cpp(57): warning C4661: 'void caffe::SplitLayer<double>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(668) : 'caffe::SplitLayer<double>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\split_layer.cpp(57): warning C4661: 'void caffe::SplitLayer<double>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(672) : 'caffe::SplitLayer<double>::Backward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\split_layer.cpp(11): warning C4661: 'void caffe::SplitLayer<float>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(668) : 'caffe::SplitLayer<float>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\split_layer.cpp(11): warning C4661: 'void caffe::SplitLayer<float>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(672) : 'caffe::SplitLayer<float>::Backward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\split_layer.cpp(11): warning C4661: 'void caffe::SplitLayer<double>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(668) : 'caffe::SplitLayer<double>::Forward_gpu' 선언을 참조하십시오.
+     1>..\..\..\DeepGrasping\src\caffe\layers\split_layer.cpp(11): warning C4661: 'void caffe::SplitLayer<double>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(672) : 'caffe::SplitLayer<double>::Backward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::SplitLayer<float>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(668) : 'caffe::SplitLayer<float>::Forward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::SplitLayer<float>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=float
+         ,            _Ty=caffe::Blob<float> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(672) : 'caffe::SplitLayer<float>::Backward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::SplitLayer<double>::Forward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(668) : 'caffe::SplitLayer<double>::Forward_gpu' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\boost/core/checked_delete.hpp(34): warning C4661: 'void caffe::SplitLayer<double>::Backward_gpu(const std::vector<caffe::Blob<Dtype> *,std::allocator<_Ty>> &,const std::vector<bool,std::allocator<bool>> &,const std::vector<_Ty,std::allocator<_Ty>> &)' : 명시적 템플릿 인스턴스화 요청에 대한 적절한 정의를 제공하지 않았습니다.
+                 with
+                 [
+                     Dtype=double
+         ,            _Ty=caffe::Blob<double> *
+                 ]
+                 D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/common_layers.hpp(672) : 'caffe::SplitLayer<double>::Backward_gpu' 선언을 참조하십시오.
+         layer_factory.cpp
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\glog/logging.h(1158): warning C4251: 'google::LogMessage::LogStream::streambuf_' : class 'google::base_logging::LogStreamBuf'에서는 class 'google::LogMessage::LogStream'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
+                 D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\glog/logging.h(1088) : 'google::base_logging::LogStreamBuf' 선언을 참조하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1445): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1447): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1449): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1455): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1457): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1463): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1465): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1470): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1474): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/descriptor.h(1478): warning C4244: 'return' : '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/unknown_field_set.h(142): warning C4267: '인수' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/unknown_field_set.h(237): warning C4267: 'return' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\google/protobuf/unknown_field_set.h(305): warning C4267: 'return' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/mat.hpp(1965): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/persistence.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/utility.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/loss_layers.hpp(16): warning C4305: '초기화 중' : 'double'에서 'const float'(으)로 잘립니다.
+         BlobLabeling_pregrasp.cpp
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/mat.hpp(1965): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/persistence.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/utility.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>HandTracker\BlobLabeling_pregrasp.cpp(41): warning C4267: '초기화 중' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>HandTracker\BlobLabeling_pregrasp.cpp(58): warning C4244: '초기화 중' : 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>HandTracker\BlobLabeling_pregrasp.cpp(61): warning C4244: '=' : 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>HandTracker\BlobLabeling_pregrasp.cpp(111): warning C4244: '=' : 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>HandTracker\BlobLabeling_pregrasp.cpp(134): warning C4244: 'return' : 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>HandTracker\BlobLabeling_pregrasp.cpp(138): warning C4267: 'return' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+         ColorBasedTracker_pregrasp.cpp
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/mat.hpp(1965): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/persistence.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/utility.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>HandTracker\ColorBasedTracker_pregrasp.cpp(197): warning C4267: '초기화 중' : 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
          main.cpp
      1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\glog/logging.h(1158): warning C4251: 'google::LogMessage::LogStream::streambuf_' : class 'google::base_logging::LogStreamBuf'에서는 class 'google::LogMessage::LogStream'의 클라이언트에서 DLL 인터페이스를 사용하도록 지정해야 합니다.
                  D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\glog/logging.h(1088) : 'google::base_logging::LogStreamBuf' 선언을 참조하십시오.
@@ -33,10 +902,16 @@
      1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/utility.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
      1>D:\Users\Vision Demo\Documents\DeepGrasping\include\caffe/loss_layers.hpp(16): warning C4305: '초기화 중' : 'double'에서 'const float'(으)로 잘립니다.
          _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
-     1>main.cpp(32): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+     1>main.cpp(33): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
                  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\conio.h(131) : 'getch' 선언을 참조하십시오.
-     1>main.cpp(83): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+     1>main.cpp(89): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
                  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\conio.h(131) : 'getch' 선언을 참조하십시오.
+         RobotManager.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/mat.hpp(1965): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/persistence.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>D:\Users\Vision Demo\Documents\DeepGrasping\3rdparty\include\opencv2/core/utility.hpp : warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+     1>Robot\RobotManager.cpp(127): warning C4101: 'presPose' :참조되지 않은 지역 변수입니다.
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\DeepGraspingSystem.exe" /INCREMENTAL:NO /NOLOGO caffelib.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib cudart.lib cublas.lib curand.lib libprotobuf.lib hdf5_tools.lib hdf5_hl_fortran.lib hdf5_fortran.lib hdf5_hl_f90cstub.lib hdf5_f90cstub.lib hdf5_cpp.lib hdf5_hl_cpp.lib hdf5_hl.lib hdf5.lib zlib.lib szip.lib opencv_world300.lib shlwapi.lib leveldb.lib cublas_device.lib cuda.lib libglog.lib lmdb.lib cudnn.lib libopenblas.dll.a libgflags.lib opencv_core2410.lib opencv_highgui2410.lib opencv_imgproc2410.lib kinect20.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\DeepGraspingSystem.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Users\Vision Demo\Documents\DeepGraspingDemoSystem\DeepGraspingSystem\x64\Release\DeepGraspingSystem.lib" /MACHINE:X64 x64\Release\batch_norm_layer.obj
          x64\Release\depth_concat_layer.obj
@@ -52,8 +927,8 @@
          x64\Release\RobotInfo.obj
          x64\Release\TrajectoryGenerator.obj
          x64\Release\MotionTimer.obj
-         x64\Release\BlobLabeling.obj
-         x64\Release\ColorBasedTracker.obj
+         x64\Release\BlobLabeling_pregrasp.obj
+         x64\Release\ColorBasedTracker_pregrasp.obj
          x64\Release\KinectConnecter.obj
          x64\Release\KinectMangerThread.obj
          x64\Release\main.obj
@@ -64,8 +939,8 @@
          x64\Release\RobotManager.obj
          x64\Release\SimulatorControl.obj
          코드를 생성하고 있습니다.
-     1>d:\users\vision demo\documents\deepgrasping\src\caffe\layer_factory.cpp(69): warning C4715: 'caffe::GetPoolingLayer<double>' : 모든 제어 경로에서 값을 반환하지는 않습니다.
      1>d:\users\vision demo\documents\deepgrasping\src\caffe\layer_factory.cpp(138): warning C4715: 'caffe::GetSoftmaxLayer<double>' : 모든 제어 경로에서 값을 반환하지는 않습니다.
+     1>d:\users\vision demo\documents\deepgrasping\src\caffe\layer_factory.cpp(69): warning C4715: 'caffe::GetPoolingLayer<double>' : 모든 제어 경로에서 값을 반환하지는 않습니다.
      1>d:\users\vision demo\documents\deepgrasping\src\caffe\layer_factory.cpp(138): warning C4715: 'caffe::GetSoftmaxLayer<float>' : 모든 제어 경로에서 값을 반환하지는 않습니다.
      1>d:\users\vision demo\documents\deepgrasping\src\caffe\layer_factory.cpp(69): warning C4715: 'caffe::GetPoolingLayer<float>' : 모든 제어 경로에서 값을 반환하지는 않습니다.
      1>d:\users\vision demo\documents\deepgrasping\src\caffe\layer_factory.cpp(161): warning C4715: 'caffe::GetTanHLayer<double>' : 모든 제어 경로에서 값을 반환하지는 않습니다.
@@ -111,4 +986,4 @@
 
 빌드했습니다.
 
-경과 시간: 00:00:19.59
+경과 시간: 00:00:32.13

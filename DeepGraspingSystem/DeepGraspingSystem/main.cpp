@@ -105,6 +105,9 @@ int main(){
 				input_vec.push_back(&rgbBlob);
 				input_vec.push_back(&depthBlob);
 				const vector<Blob<float>*>& result_pregrasp = pregrasp_net.Forward(input_vec, &loss);
+				resultToRobotMotion(result_approach, robotMotion);
+				simul.renderData(robotMotion);
+				robot.Move(robotMotion);
 			}
 
 			robot.safeRelease();

@@ -92,7 +92,22 @@ void RobotManager::TorqueOff(){
 }
 
 void RobotManager::Move(int *pos){
+	while (1){
+		int goalPos[NUM_XEL];
+		arm.SetGoalPosition(pos);
+		arm.GetGoalPosition(goalPos);
 
+		int i = 0;
+		for (i = 0; i < NUM_XEL; i++){
+			if (pos[i] != goalPos[i]){
+				break;
+			}
+		}
+		if (i == NUM_XEL)
+			break;
+	}
+
+	//움직일때까지 기다리는 부분
 }
 
 void RobotManager::FingerLimit(int *src){
